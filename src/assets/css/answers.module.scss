@@ -1,0 +1,79 @@
+.flexbox.flexbox_2 {
+  background-color: white;
+  width: 60%;
+  max-width: 1200px;
+  margin: auto;
+  
+  .rows.rows_2 {
+    display: flex;
+    justify-content: center !important;
+    box-shadow: none !important;
+
+    .pies {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      padding: 0 30px;
+      .survey_info {
+        width: 90%;
+       margin-top: 30px;
+       font-size: 15px;
+        span{
+          color: #7356c0;
+        
+        h1 {
+          font-family: "Montserrat";
+          font-style: normal;
+          font-weight: 500;
+          line-height: 20px;
+          /* identical to box height, or 125% */
+
+          /* Basic colors/Neutral 700 */
+
+          color: gray;
+          font-size: 15px;
+        }
+      }
+      }
+      .chart_contaioner_2 {
+        width: 80%;
+      }
+      .show_anal_button {
+        background-color: transparent;
+        color: #7356c0;
+        outline: none;
+        border: transparent;
+        font-size: 16px;
+        font-weight: 500;
+        text-align: right;
+      }
+
+      .border {
+        width: 100%;
+        border: 1px solid gray;
+        margin-block: 30px;
+      }
+    }
+
+  }
+  button{
+    background-color: transparent;
+    color: #7356c0;
+    outline: none;
+    border: transparent;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: right;
+    margin: 30px 15px 15px 25px;
+  }
+  .no_block_shadow {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    .question {
+      color: #7356c0;
+      align-self: center;
+    }
+  }
+}
