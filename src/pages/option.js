@@ -9,15 +9,15 @@ class Option extends React.Component {
     options: {},
   };
   componentWillMount() {
-    const { id, question } = this.props;
-    console.log(id, question);
+    const { id, question,districts,user_professions } = this.props;
+    
     axios
-      .get(
-        `https://backendapp.murmurcars.com/api/v1/admin/survey-answer-analytics?id=${id}&question=${question}`
+      .post(
+        `https://backendapp.getinsightiq.com/api/v1/admin/survey-answer-analytics?id=${id}&question=${question}`,
+        {districts, user_professions}
       )
       .then((response) => {
         const { Analytics } = response.data;
-        console.log(Analytics);
         this.setState({
           ...this.state,
           options: Analytics,

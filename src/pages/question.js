@@ -3,7 +3,7 @@ import axios from "axios";
 import classes from "../assets/css/index.module.scss";
 import BarDefault from "./apexcharts/bar-default";
 
-class Options extends React.Component {
+class Question extends React.Component {
   state = {
     survey: {},
   };
@@ -11,7 +11,7 @@ class Options extends React.Component {
     const { id } = this.props;
     console.log(id);
     axios
-      .get(`https://backendapp.murmurcars.com/api/v1/admin/survey/${id}`)
+      .get(`https://backendapp.getinsightiq.com/api/v1/admin/survey/${id}`)
       .then((response) => {
         const { data } = response;
         console.log(data);
@@ -63,4 +63,4 @@ class Options extends React.Component {
   }
 }
 
-export default Options;
+export default Question;

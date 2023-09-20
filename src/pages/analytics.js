@@ -14,14 +14,15 @@ class Analytics extends React.Component {
     loading: true
   };
   componentWillMount() {
-    const { id } = this.props;
+    const { id, districts,user_professions } = this.props;
     axios
-      .get(
-        `https://backendapp.murmurcars.com/api/v1/admin/users-analytics/${id}`
+      .post(
+        `https://backendapp.getinsightiq.com/api/v1/admin/users-analytics/${id}`,
+        {districts: districts, user_professions: user_professions}
       )
       .then((response) => {
         const { location, gender, age, interest, income } = response.data;
-        console.log(response.data)
+      
         this.setState({
           ...this.state,
           location,
